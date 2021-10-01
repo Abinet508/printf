@@ -1,6 +1,7 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
-
+#ifndef _MAIN_H
+#define _MAIN_H
+#include <stdlib.h>
+#include <unistd.h>
 #include <stdarg.h>
 /**
  * struct print - structure for printing various types
