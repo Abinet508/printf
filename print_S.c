@@ -6,6 +6,7 @@
  * @str: string to be formatted
  * Return: number of chars printed
  */
+
 int print_S(char *str)
 {
 	int i = 0, chars_printed = 0;
