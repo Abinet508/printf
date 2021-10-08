@@ -1,57 +1,66 @@
-## main.h
-This file contains the function prototypes, macros and standard libraries that
-have been defined and used in this repository.
+# _printf
 
-## _putchar.c
-This file contains the _putchar function that prints a character to standard
-output. It takes a character argument and returns an integer.
+_printf is a simple custom printf function that formats and prints data to the standard output.
 
-## EC_printf.c
-Contains the _printf function and is called to perform operations that allow
-the user to print formatted output. The format string specifies the format in
-which to print the arguments passed to the printf function since it is a
-variadic function. The format specifiers allowed include:
-1. c - print a character
-2. s - print an array of characters
-3. i and d - print an integer
-4. b - print an unsigned integer in binary format
-5. u - print an unsigned integer
-6. o - print an integer in octal format (base 8)
-7. x and X - print an integer in hexadecimal format (base 16). If 'x' is passed
-   use lowercase letters, else use uppercase letters.
-8. S - custom string specifier that prints the ACSII codes of any non-printable
-   characters passed i.e (0 < ASCII value < 32 or >= 127)
-9. p - prints a pointer value
-10. r - prints the passed string in reverse order
-11. R - prints the Rot13-encrypted version of the passed string
-12. % - prints the modulus sign
+# Description
+_printf() functiion formats and prints data to the standard output according to the format specified.
 
-## print_num.c
-Function to print a number as one or more characters
+The function has the following conversion specifies:
 
-## print_string.c
-Function to print a string character by character
++ %c - prints a character
++ %d - prints a  integer
++ %s - prints a string
++ %i - prints an integer
++ % - prints percentage;
++ %b - print binary numbers
++ %u - print unsigned integers of type int
++ %x - print hexadecimal numbers in lowercase
++ %X - print hexadecimal numbers in uppercase
++ %o - print octal numbers
++ %r - prints string in reverse order 
++ %R - prints string in ROT13 encoding
++ %p - print pointer addresses
++ ' ' - print a space
++ # -  modifier for unsigned conversions
++ +: prints a plus sign in front of the number
 
-## print_reverse
-Function to reverse string and print it
 
-## print_rot13
-Converts string to rot13 and prints it
+# Installation
+ you can clone this repository  and use the function on your local machine.
 
-## print_binary
-Converts an unsigned int to binary and prints it
+```bash 
+git clone https://github.com/Abinet508/printf.git
+```
 
-## print_pointer
-Prints address of pointer
+# Usage
++ include the `main.h ` header file on the function for using _printf().
++ All the files are to be compiled on Ubuntu 14.04 LTS
+```bash
+Compile your code with `gcc -Wall -Werror -Wextra -pedantic *.c`
+```
 
-## print_odh
-Handles octal, decimal and hexadecimal conversions
+```c
+#include <stdio.h>
+#include "main.h"
 
-## print_unknown_spec
-Handles unknown format specifiers
+int main(void)
+{
+    int i = 10;
+    int print;
+    char *s = "printf by Teddy & Mark";
+    _printf("%d %s %c\n", i, s, 'c');
+     print =  _printf("%d", s); /* get number of characters */
+     printf("%d\n", print); /* print number of characters */
+    return 0;
+}
 
-## print_S
-prints custom formatted string
 
-## man(3)printf
-documents this custom printf function
+```
+
+# Copyright
+Copyright (c) 2021 Teddy Kisala & Mark Tanui
+
+
+
+
+
