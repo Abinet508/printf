@@ -58,7 +58,7 @@ int main(void)
 ```
 
 # Copyright
-Copyright (c) 2021 Teddy Kisala & Mark Tanui
+Copyright (c) 2021 Abinet Tesfu Bezawit Girma
 
 
 
